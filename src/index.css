@@ -55,6 +55,10 @@
 p.screenshot-text {
   position: relative;
   bottom: -10px; /* Điều chỉnh khoảng cách với ảnh */
+  display: block; /* Giữ đúng khoảng cách */
+  text-align: center;
+  line-height: 1.2; /* Tránh khoảng cách dòng bị thay đổi */
+  margin-bottom: 0; /* Ngăn bị đẩy xuống */
 }
 
 .grayscale {
@@ -75,7 +79,7 @@ p.screenshot-text {
 
 /* Soft filter */
 .soft {
-  filter: brightness(1.1) contrast(0.9) saturate(1);
+  filter: brightness(130%) contrast(105%) saturate(80%) blur(0.3px);
 }
 
 /* Vibrant filter (tươi tắn) */
@@ -91,4 +95,32 @@ p.screenshot-text {
 /* Brighten filter (trắng hơn) */
 .brighten {
   filter: brightness(1.4) contrast(0.9);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #f472b6; /* Màu của caret (con trỏ) */
+  }
+}
+
+.typing-effect {
+  overflow: hidden; /* Ẩn phần văn bản chưa được hiển thị */
+  white-space: nowrap; /* Ngăn văn bản xuống dòng */
+  margin: 0 auto; /* Căn giữa */
+  letter-spacing: 0.15em; /* Khoảng cách giữa các ký tự */
+  animation: typing 3.5s steps(30, end) infinite,
+    blink-caret 0.75s step-end infinite;
 }

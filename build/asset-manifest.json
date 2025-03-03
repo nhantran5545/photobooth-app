@@ -1,21 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.698ec290.css",
-    "main.js": "/static/js/main.f78b2234.js",
+    "main.css": "/static/css/main.5d159596.css",
+    "main.js": "/static/js/main.efe83b57.js",
     "static/media/hynd.JPG": "/static/media/hynd.4cc72e6a0e04611e0005.JPG",
     "static/media/photo.JPG": "/static/media/photo.10febb9a9c3d9c63f534.JPG",
     "static/media/background.png": "/static/media/background.fbb4d169b3a657058d9c.png",
     "static/media/Jersey15-Regular.ttf": "/static/media/Jersey15-Regular.78c13419c7746b1ff731.ttf",
+    "static/media/badge.png": "/static/media/badge.c1d56ef9a2141ee33862.png",
     "static/media/LeagueGothic_SemiCondensed-Regular.ttf": "/static/media/LeagueGothic_SemiCondensed-Regular.8134f153ab1d14f892d3.ttf",
     "static/media/LeagueGothic-Regular.ttf": "/static/media/LeagueGothic-Regular.302801beeabe5200c234.ttf",
     "static/media/LeagueGothic_Condensed-Regular.ttf": "/static/media/LeagueGothic_Condensed-Regular.c977a00cfa721a1a3699.ttf",
+    "static/media/discipline.png": "/static/media/discipline.555fb26b863247d7c9e9.png",
+    "static/media/camerasticker.png": "/static/media/camerasticker.9eb1cf9fb787147d2a28.png",
+    "static/media/photo-camera.png": "/static/media/photo-camera.df745d3f21da5fc0cf22.png",
+    "static/media/bow.png": "/static/media/bow.461c4c6f75047d2e0dd5.png",
     "static/media/title.png": "/static/media/title.3864a600682854fceeeb.png",
     "index.html": "/index.html",
-    "main.698ec290.css.map": "/static/css/main.698ec290.css.map",
-    "main.f78b2234.js.map": "/static/js/main.f78b2234.js.map"
+    "main.5d159596.css.map": "/static/css/main.5d159596.css.map",
+    "main.efe83b57.js.map": "/static/js/main.efe83b57.js.map"
   },
   "entrypoints": [
-    "static/css/main.698ec290.css",
-    "static/js/main.f78b2234.js"
+    "static/css/main.5d159596.css",
+    "static/js/main.efe83b57.js"
   ]
 }
