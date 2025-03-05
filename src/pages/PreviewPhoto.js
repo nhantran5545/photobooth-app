@@ -58,7 +58,7 @@ const Preview = () => {
       </div>
 
       {/* Footer nằm dưới cùng */}
-      <footer className="text-center text-gray-600 mt-12">
+      <footer className="text-center text-gray-600 mt-16">
         <p className="text-sm">
           This is a product under development. If you encounter any bugs, please
           bear with me. 😊

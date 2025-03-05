@@ -11,7 +11,7 @@ const CameraView = ({ webcamRef, countdown, filter }) => {
         className={`w-full rounded-xl ${filter}`}
       />
       {countdown > 0 && (
-        <div className="animate-pulse-slow absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl md:text-6xl font-bold text-red-500 bg-white bg-opacity-20 rounded-2xl px-4 py-2 md:px-8 md:py-4">
+        <div className="animate-pulse-slow absolute top-[45%] left-[45%] transform -translate-x-1/2 -translate-y-1/2 text-4xl md:text-6xl font-bold text-red-500 bg-white bg-opacity-20 rounded-2xl px-4 py-2 md:px-8 md:py-4">
           {countdown}
         </div>
       )}
