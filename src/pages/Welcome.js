@@ -9,6 +9,9 @@ import {
   FaRocket,
   FaMusic,
   FaFilm,
+  FaGithub,
+  FaFacebook,
+  FaEnvelope,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -141,6 +144,38 @@ const Welcome = () => {
       >
         <FaCameraRetro className="text-xl md:text-2xl" /> BẮT ĐẦU
       </motion.button>
+
+      {/* Footer */}
+      <footer className="absolute bottom-0 w-full text-center text-gray-600 py-4 ">
+        <p className="text-sm">
+          This is a product under development. If you encounter any bugs, please
+          bear with me. 😊
+        </p>
+        <div className="flex justify-center gap-4 mt-2">
+          <a
+            href="https://github.com/nhantran5545"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-pink-400 transition"
+          >
+            <FaGithub size={28} />
+          </a>
+          <a
+            href="https://www.facebook.com/6month06/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-pink-400 transition"
+          >
+            <FaFacebook size={28} />
+          </a>
+          <a
+            href="mailto:nhantran.forwork@gmail.com"
+            className="text-gray-600 hover:text-pink-400 transition"
+          >
+            <FaEnvelope size={28} />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };

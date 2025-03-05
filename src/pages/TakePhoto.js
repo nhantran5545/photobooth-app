@@ -6,6 +6,8 @@ import CameraView from "../components/CameraView";
 import CapturedPhotos from "../components/CapturedPhotos";
 import { startPhotoSession } from "../utils/startPhotoSession";
 import { cancelCapture } from "../utils/cancelCapture";
+import cameraShutterSound from "../assets/audio/cameraSound.mp3";
+import { FaGithub, FaFacebook, FaEnvelope } from "react-icons/fa";
 
 const TakePhoto = () => {
   const webcamRef = useRef(null);
@@ -18,6 +20,9 @@ const TakePhoto = () => {
   const [isCapturing, setIsCapturing] = useState(false); // Trạng thái đang chụp ảnh
   const [captureInterval, setCaptureInterval] = useState(null); // Lưu interval đếm ngược
 
+  // Sử dụng useRef để tham chiếu đến thẻ audio
+  const audioRef = useRef(null);
+
   // Hàm bắt đầu chụp ảnh
   const handleStartPhotoSession = () => {
     startPhotoSession(
@@ -29,7 +34,8 @@ const TakePhoto = () => {
       setCountdown,
       setCaptureInterval,
       navigate,
-      frameStyle
+      frameStyle,
+      audioRef // Truyền tham chiếu âm thanh
     );
   };
 
@@ -45,6 +51,9 @@ const TakePhoto = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-100 via-pink-200 to-white relative backdrop-blur-lg">
+      {/* Thêm thẻ audio vào component */}
+      <audio ref={audioRef} src={cameraShutterSound} preload="auto" />
+
       <Stickers />
       <ControlPanel
         frameStyle={frameStyle}
@@ -84,6 +93,38 @@ const TakePhoto = () => {
           Cancel Capture
         </button>
       </div>
+
+      {/* Footer */}
+      <footer className="text-center text-gray-600 mt-8 mb-4">
+        <p className="text-sm">
+          This is a product under development. If you encounter any issues,
+          please bear with me. 😊
+        </p>
+        <div className="flex justify-center gap-4 mt-2">
+          <a
+            href="https://github.com/nhantran5545"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-pink-400 transition"
+          >
+            <FaGithub size={28} />
+          </a>
+          <a
+            href="https://www.facebook.com/6month06/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-pink-400 transition"
+          >
+            <FaFacebook size={28} />
+          </a>
+          <a
+            href="nhantran.forwork@gmail.com"
+            className="text-gray-600 hover:text-pink-400 transition"
+          >
+            <FaEnvelope size={28} />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };

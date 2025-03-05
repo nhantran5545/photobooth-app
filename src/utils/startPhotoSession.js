@@ -9,7 +9,8 @@ export const startPhotoSession = async (
   setCountdown,
   setCaptureInterval,
   navigate,
-  frameStyle
+  frameStyle,
+  audioRef // Thêm tham số âm thanh
 ) => {
   setIsCapturing(true); // Bắt đầu chụp ảnh
   setCapturedImages([]); // Xóa ảnh cũ
@@ -33,6 +34,12 @@ export const startPhotoSession = async (
             if (filteredImage) {
               newCapturedImages.push(filteredImage); // Lưu ảnh đã lật và lọc vào mảng tạm
               setCapturedImages((prev) => [...prev, filteredImage]); // Cập nhật state
+
+              // Phát âm thanh chụp ảnh
+              if (audioRef.current) {
+                audioRef.current.currentTime = 0; // Đặt lại thời gian phát
+                audioRef.current.play(); // Phát âm thanh
+              }
             }
             resolve();
           });

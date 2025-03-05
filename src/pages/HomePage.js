@@ -27,6 +27,9 @@ import {
   FaFeather,
   FaLeaf,
   FaSnowflake,
+  FaGithub,
+  FaFacebook,
+  FaEnvelope,
 } from "react-icons/fa";
 
 const Stickers = () => {
@@ -227,10 +230,13 @@ const HomePage = () => {
   const navigate = useNavigate();
   return (
     <div
-      className="w-screen h-screen bg-cover bg-center"
+      className="w-screen h-screen bg-cover bg-center flex flex-col justify-between"
       style={{ backgroundImage: `url(${Background})` }}
     >
+      {/* Stickers */}
       <Stickers />
+
+      {/* Nội dung chính */}
       <div className="flex items-center justify-center w-full h-full bg-[#333333] bg-opacity-15 px-4">
         {/* Logo với animation */}
         <div className="fixed top-0 mt-5 left-0 w-full py-4 flex justify-center items-center gap-2 z-50">
@@ -249,8 +255,8 @@ const HomePage = () => {
           <motion.button
             onClick={() => navigate("/welcome")}
             className="relative mt-2 px-10 md:px-20 py-6 font-bold rounded-lg bg-[#FF75A6] text-black shadow-lg 
-  before:absolute before:inset-1 before:bg-[#FFDCE8] before:my-1 md:before:my-2 before:mx-1 md:before:mx-2 before:rounded-sm before:transition-all before:duration-300
-  hover:border-pink-200 hover:bg-black hover:before:bg-pink-500 hover:text-white flex items-center justify-center gap-2"
+before:absolute before:inset-1 before:bg-[#FFDCE8] before:my-1 md:before:my-2 before:mx-1 md:before:mx-2 before:rounded-sm before:transition-all before:duration-300
+hover:border-pink-200 hover:bg-black hover:before:bg-pink-500 hover:text-white flex items-center justify-center gap-2"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -264,16 +270,48 @@ const HomePage = () => {
           </motion.button>
         </div>
 
-        {/* Photo Booth 2x2 - Ẩn dần khi thu nhỏ màn hình */}
+        {/* Photo Booth 2x2 - Ẩn trên màn hình nhỏ */}
         <div className="hidden md:block">
           <PhotoBooth2x2 images={[photo1, photo2, photo3, hynd]} />
         </div>
 
-        {/* Vertical Photo Frame - Ẩn dần khi thu nhỏ màn hình */}
+        {/* Vertical Photo Frame - Ẩn trên màn hình nhỏ */}
         <div className="hidden md:block">
           <VerticalPhotoFrame images={[photo1, photo2, photo3, hynd]} />
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="absolute bottom-0 w-full text-center text-gray-600 py-4 ">
+        <p className="text-sm">
+          This is a product under development. If you encounter any bugs, please
+          bear with me. 😊
+        </p>
+        <div className="flex justify-center gap-4 mt-2">
+          <a
+            href="https://github.com/nhantran5545"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-pink-400 transition"
+          >
+            <FaGithub size={28} />
+          </a>
+          <a
+            href="https://www.facebook.com/6month06/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-pink-400 transition"
+          >
+            <FaFacebook size={28} />
+          </a>
+          <a
+            href="mailto:nhantran.forwork@gmail.com"
+            className="text-gray-600 hover:text-pink-400 transition"
+          >
+            <FaEnvelope size={28} />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };

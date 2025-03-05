@@ -52,7 +52,7 @@ export const captureScreenshot = async () => {
     .then((dataUrl) => {
       const link = document.createElement("a");
       link.href = dataUrl;
-      link.download = "screenshot.png";
+      link.download = "photobooth.png";
       link.click();
     })
     .catch((error) => {
