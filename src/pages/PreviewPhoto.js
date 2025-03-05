@@ -28,7 +28,7 @@ const Preview = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-between h-screen bg-gradient-to-bl from-pink-200 via-indigo-100 to-pink-100  p-4 md:p-8">
+    <div className="flex flex-col justify-between min-h-screen bg-gradient-to-bl from-pink-200 via-indigo-100 to-pink-100  p-4 md:p-8">
       <div className="flex flex-col items-center ">
         <h1 className="text-3xl md:text-5xl font-bold text-gray-700 mb-4 md:mb-8 mt-2 md:mt-6 font-[LeagueGothic-Regular] tracking-wider">
           Ảnh đã chụp
@@ -58,7 +58,7 @@ const Preview = () => {
       </div>
 
       {/* Footer nằm dưới cùng */}
-      <footer className="text-center text-gray-600 mt-8">
+      <footer className="text-center text-gray-600 mt-12">
         <p className="text-sm">
           This is a product under development. If you encounter any bugs, please
           bear with me. 😊
