@@ -118,19 +118,21 @@ const Welcome = () => {
 
       {/* Nội dung với animation */}
       <motion.p
-        className="text-lg md:text-xl text-gray-950 max-w-2xl leading-relaxed mb-8"
+        className="text-lg md:text-xl text-gray-950 max-w-3xl leading-relaxed mb-8"
         variants={textVariants}
         initial="hidden"
         animate="visible"
         transition={{ delay: 0.3 }}
       >
-        Bạn có <b>3 giây hoặc 10 giây</b> cho mỗi bức ảnh – không có chụp lại!
+        Bạn có <b>3 giây hoặc 10 giây </b> cho mỗi bức ảnh và{" "}
+        <b>tùy chọn theo khung ảnh 2x2 hoặc dọc 4 ảnh</b> – bạn có thể hủy và
+        chụp lại!
         <br />
-        Gian chụp ảnh này sẽ chụp liên tiếp <b>4 tấm</b>, hãy tạo dáng đẹp nhất
-        và tận hưởng khoảnh khắc vui vẻ!
+        Chụp ảnh sẽ chụp liên tiếp <b>4 tấm</b>, hãy tạo dáng đẹp nhất và tận
+        hưởng khoảnh khắc vui vẻ!
         <br />
         Sau khi hoàn tất, bạn có thể tải xuống bản kỹ thuật số và chia sẻ với
-        mọi người!
+        mọi người nhé!
       </motion.p>
 
       {/* Nút bắt đầu với animation */}
