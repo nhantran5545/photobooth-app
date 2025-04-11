@@ -33,7 +33,8 @@ export const captureAndFlip = async (webcamRef, filter) => {
   });
 
   // Áp dụng bộ lọc
-  const filteredImage = await applyFilter(flippedImage, filter);
-
-  return filteredImage; // Trả về ảnh đã lật và lọc
+// filepath: /Users/nhantran/GitRepository/photobooth-app/src/utils/captureAndFlip.js
+const filteredImage = await applyFilter(flippedImage, filter);
+console.log("Applying filter:", filter); // Debug log
+return filteredImage;
 };
